@@ -105,6 +105,9 @@ ResumeRoast.io is a SaaS platform that provides brutally honest, AI-powered resu
 - [ ] Password reset email delivered in <2 minutes
 - [ ] Sessions persist for 30 days
 - [ ] GDPR-compliant data deletion
+- [ ] Invalid email/password inputs surface inline copy: "Enter a valid email address" / "Password must be at least 12 characters with a symbol."
+- [ ] Unverified accounts are blocked with resend prompt: "Verify your email to access ResumeRoast. Resend link?"
+- [ ] Authentication failures return sanitized toast: "Check your email or password and try again."
 
 ---
 
@@ -136,6 +139,10 @@ ResumeRoast.io is a SaaS platform that provides brutally honest, AI-powered resu
 - [ ] Error messages clear for unsupported formats
 - [ ] Works on mobile devices
 - [ ] Shows upload progress indicator
+- [ ] Empty dropzone copy states: "Drop your resume or browse to upload. Supported: PDF, DOCX, TXT up to 10MB."
+- [ ] Progress states display "Uploading securely…" and "Analyzing layout and text…"
+- [ ] Virus scan failure surfaces "We blocked this file for safety. Try a clean copy."
+- [ ] Rate limit and server errors return "Too many uploads today. Try again after midnight UTC." / "Something broke on our side. Retry in a moment."
 
 **Edge Cases:**
 - Password-protected PDFs → Show error: "Remove password protection"
@@ -168,6 +175,10 @@ ResumeRoast.io is a SaaS platform that provides brutally honest, AI-powered resu
 - [ ] Scraping completes in <15 seconds
 - [ ] Auto-save draft every 30 seconds
 - [ ] Character count updates in real-time
+- [ ] Empty state prompt displays: "Paste the job description or import a URL for best results."
+- [ ] Character soft cap warning copy: "Trim the description under 20,000 characters."
+- [ ] Failed scrape surfaces: "We couldn't reach that link. Paste the text instead."
+- [ ] Import progress shows status: "Pulling role details…"
 
 ---
 
@@ -363,6 +374,9 @@ Return ONLY valid JSON, no additional text.
 - [ ] Roast tone appropriate (not offensive)
 - [ ] All 9 components present in response
 - [ ] Mobile display renders correctly
+- [ ] Loading skeleton displays copy: "Cooking up your roast…" until data returns
+- [ ] Failure state shows banner: "We couldn't finish the roast. Your credits were refunded." with Start New Roast CTA
+- [ ] Partial parse triggers notice: "We only parsed part of your resume. Review the sections below and adjust your file."
 
 -----
 
@@ -545,6 +559,9 @@ Return ONLY valid JSON, no additional text.
 - [ ] Pagination works smoothly
 - [ ] Graph renders correctly
 - [ ] Settings save immediately
+- [ ] Empty history state displays: "Your roast history will live here. Upload your first resume to see results." with Upload CTA
+- [ ] No-results search state shows: "No roasts match those filters. Clear filters to try again."
+- [ ] History load failures surface banner: "We couldn't load your history. Refresh to try again."
 
 -----
 
